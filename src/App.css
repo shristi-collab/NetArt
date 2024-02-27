@@ -1,38 +1,171 @@
+/* Reset defaults */
+body,
+h1,
+h2,
+h3,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: linear-gradient(to bottom, #f8f8f8 13%, rgb(241, 218, 85) 100%);
+  font-family : Times New Roman;
+}
+
+/* Box sizing */
+* {
+  box-sizing: border-box;
+}
+
+/* Overall layout */
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+/* Centered logo */
+.center-content {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.centered-logo {
+  max-width: 40%;
+  width: auto;
+  height: auto;
+}
+
+.side-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  vertical-align: middle;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
 }
 
-.App-link {
-  color: #61dafb;
+/* Left image */
+.left-section {
+  width: 100%;
+  margin-top:auto;
+  margin-bottom:auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.left-image {
+  max-width: 80%;
+  width: 80%;
+  height: 80vh;
+}
+
+.right-section {
+  max-width: 700px;
+  height: auto;
+  text-align: center;
+  text-align: left;
+  align-items: left;
+}
+
+.right-section h3{
+  text-align: center;
+}
+
+.subtext {
+  width: 90%;
+  font-size: small;
+  margin: 10px auto 0 auto;
+  text-align: justify;
+}
+
+.additional-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+
+  @media (min-width: 768px) {
+    width : 100%;
   }
-  to {
-    transform: rotate(360deg);
-  }
+}
+
+.additional-image {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+}
+
+.additional-text {
+  text-align: center;
+  margin-top: 10px;
+  font-size: small;
+}
+
+.center-img {
+  max-width: 80%;
+  width: auto;
+  height: auto;
+}
+
+/* Red line divider */
+.divider {
+  width: 100%;
+  height: 1px;
+  background-color: red;
+  margin-top: 20px;
+}
+
+
+/* Footer */
+.footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  color: aliceblue;
+  font-weight: bold;
+  background-color: red;
+}
+
+.footer-icon {
+  display: flex;
+  align-items: center;
+}
+
+.footer-icon img {
+  width: 30px;
+  height: 30px;
+  margin-right: 5px; /* Adjust margin for spacing between icon and text */
+}
+
+/* Custom container */
+.custom-container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap to the next line on smaller screens */
+  align-items: center;
+  justify-content: center; /* Center items horizontally */
+}
+
+/* Custom item (text) */
+.custom-item {
+  padding: 10px;
+  width: auto;
+  white-space: nowrap; /* Prevent text from wrapping to the next line */
+}
+
+/* Custom line */
+.custom-line {
+  width: 1px;
+  height: 20px;
+  background-color: red;
+  margin: 0 10px;
 }
